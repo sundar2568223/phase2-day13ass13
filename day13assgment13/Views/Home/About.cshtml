@@ -1,0 +1,14 @@
+﻿@{
+    ViewBag.Title = "About";
+}
+<div>
+    <h2 class="text-center">
+        @{Html.RenderPartial("View");}
+    </h2>
+</div>
+<main aria-labelledby="title">
+    <h2 id="title">@ViewBag.Title.</h2>
+    <h3>@ViewBag.Message</h3>
+
+    <p>Use this area to provide additional information.</p>
+</main>

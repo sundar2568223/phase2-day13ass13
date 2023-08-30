@@ -1,0 +1,41 @@
+﻿@model IEnumerable<day13assgment13.Models.TeamPage>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+@{ Html.RenderPartial("View");}
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.TeamId)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TeamName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.NOCW)
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.TeamName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.NOCW)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { id = item.TeamId }) |
+                @Html.ActionLink("Details", "Details", new { id = item.TeamId }) |
+                @Html.ActionLink("Delete", "Delete", new { id = item.TeamId })
+            </td>
+        </tr>
+    }
+
+</table>
